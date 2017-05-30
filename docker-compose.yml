@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    build: .
+    image: shaunpersad/d3-with-react-tutorial
+    command: nodemon server.js
+    environment:
+      NODE_ENV: development
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
