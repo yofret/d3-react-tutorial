@@ -14,8 +14,8 @@ all of the dependencies *Yes Docker is that simple* and then you can view the ap
 ## Files
 
 The two main files to focus on for this project is `Home.js` and `SingleBarGraph.js` which are located in the `react-components/` directory.
- 1. [Home:](https://github.com/caesarbell/d3-react-tutorial/blob/master/react-components/Home.js)
- 2. [SingleBarGraph:](https://github.com/caesarbell/d3-react-tutorial/blob/master/react-components/graphs/SingleBarGraph.js)
+ 1. [Home.js](https://github.com/caesarbell/d3-react-tutorial/blob/master/react-components/Home.js)
+ 2. [SingleBarGraph.js](https://github.com/caesarbell/d3-react-tutorial/blob/master/react-components/graphs/SingleBarGraph.js)
 
 
 ## Fun fact
