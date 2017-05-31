@@ -1,32 +1,50 @@
+var path = require('path');
+
+
 module.exports = {
   devtool: 'inline-sourcemap',
   entry: [
-    './index.js',
-    'webpack/hot/dev-server',
-    'webpack-hot-middleware/client',
+    './index.js'
   ],
   output: {
-    path: '/public/js',
+    path: path.resolve(__dirname, 'public/js'),
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: [
-          'react-hot',
-          'babel',
-          'babel-loader'
-        ]
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: [
+            // {
+            //   loader: 'react-hot-loader'
+            // },
+            {
+              loader: 'babel-loader'
+            }
+          ]
       },
       {
-        loaders: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
-        test: /\.scss$/
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+                includePaths: ['./styles/main.scss'],
+                sourceMap: true
+            }
+          }
+        ]
       }
     ]
   }

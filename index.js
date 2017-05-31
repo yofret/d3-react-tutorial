@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { Home } from './react-components/Home';
-// import "./public/styles/styles.scss";
+import Home  from './react-components/Home';
+import "./scss/main.scss";
 
 
 render(
-  <Home />,
+  React.createElement(Home),
   document.getElementById('root')
 );

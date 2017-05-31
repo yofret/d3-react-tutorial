@@ -3,7 +3,7 @@ services:
   app:
     build: .
     image: shaunpersad/d3-with-react-tutorial
-    command: nodemon server.js
+    command: npm start
     environment:
       NODE_ENV: development
     ports:
@@ -11,3 +11,4 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+      - /usr/src/app/public
