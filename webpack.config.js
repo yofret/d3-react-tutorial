@@ -40,7 +40,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-                includePaths: ['./styles/main.scss'],
+                includePaths: ['./scss/main.scss'],
                 sourceMap: true
             }
           }
